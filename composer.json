@@ -1,0 +1,11 @@
+{
+    "name": "crocoit/php-design-patterns",
+    "description": "code examples for design patterns with php",
+    "authors": [
+        {
+            "name": "DevBigBoy",
+            "email": "m.shazly@crocoit.com"
+        }
+    ],
+    "require": {}
+}
