@@ -7,5 +7,12 @@
             "email": "m.shazly@crocoit.com"
         }
     ],
-    "require": {}
+    "require": {
+        "phpunit/phpunit": "^10"
+    },
+    "autoload": {
+        "psr-4": {
+            "Creational\\": "Creational"
+        }
+    }
 }

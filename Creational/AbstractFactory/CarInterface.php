@@ -3,6 +3,5 @@
 namespace Creational\AbstractFactory;
 
 interface CarInterface {
-
-    public function calculatePrice();
+    public function calculatePrice(): float;
 }
