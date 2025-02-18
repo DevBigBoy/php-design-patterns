@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Creational\Builder\Models;
 
-class BENZCar {
+class BENZCar extends Car
+{
     private $data = [];
-
-
-    public function setPart($name, $value) {
+    public function setPart($name, $value)
+    {
         $this->data[$name] = $value;
     }
 }

@@ -1,30 +1,40 @@
-<?php 
+<?php
 
 declare(strict_types=1);
 
 namespace Creational\Builder;
 
-class BMWCarBuilder implements CarBuilderInterface{
+use Creational\Builder\Models\BMWCar;
+use Creational\Builder\Models\Car;
+
+class BMWCarBuilder implements CarBuilderInterface
+{
+    /**
+     * @var Car
+     */
+    private $type;
 
     public function createCar() {
-
+        $this->type = new BMWCar();
     }
 
-    public function addEngine(){
+    public function addEngine() {
+        $this->type->setPart('engine','Hello From engine');
+    } 
 
+    public function addDoors() {
+        $this->type->setPart('door','Hello From door');
     }
 
-    public function addDoors(){
-
+    public function addBody() {
+        $this->type->setPart('body','Hello From Body');
     }
 
-    public function addBody(){
-
+    public function addWheel() {
+        $this->type->setPart('wheel','Hello From wheel');
     }
 
-    public function addWheel(){
-
+    public function getCar():Car {
+        return $this->type;
     }
-
-    public function getCar(){}
 }

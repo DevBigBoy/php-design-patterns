@@ -1,27 +1,23 @@
-<?php 
+<?php
 
 namespace Creational\Builder;
 
-class BENZCarBuilder implements CarBuilderInterface{
+use Creational\Builder\Models\BENZCar;
+
+class BENZCarBuilder implements CarBuilderInterface
+{
+    private $type;
     public function createCar() {
-
+        $this->type = new BENZCar();
     }
 
-    public function addEngine(){
+    public function addEngine() {}
 
-    }
+    public function addDoors() {}
 
-    public function addDoors(){
+    public function addBody() {}
 
-    }
+    public function addWheel() {}
 
-    public function addBody(){
-
-    }
-
-    public function addWheel(){
-
-    }
-
-    public function getCar(){}
+    public function getCar() {}
 }

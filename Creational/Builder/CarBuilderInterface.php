@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Creational\Builder;
 
+use Creational\Builder\Models\Car;
+
 interface CarBuilderInterface
 {
     public function createCar();
@@ -11,5 +13,5 @@ interface CarBuilderInterface
     public function addDoors();
     public function addBody();
     public function addWheel();
-    public function getCar();
+    public function getCar(): Car;
 }
